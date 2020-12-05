@@ -2,12 +2,10 @@ import sys
 
 def main():
     expenses = []
-    input_file = open("input.txt", "r")
-    for line in input_file:
-        expenses.append(int(line.strip()))
+    with open("input.txt", "r") as input_file:
+        for line in input_file:
+            expenses.append(int(line.strip()))
         
-    input_file.close()
-
     for a in expenses:
         for b in expenses:
             if a + b == 2020:
