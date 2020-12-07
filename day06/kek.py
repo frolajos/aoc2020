@@ -7,7 +7,7 @@ with open("input.txt") as f:
 def question_count():
     counter = 0
     for l in ls:
-        counter += len(set(''.join(l.split())))
+        counter += len(set(l.replace('\n', '')))
     return counter
      
 
